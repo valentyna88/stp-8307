@@ -1,18 +1,102 @@
 @import './header.scss';
-@import './vite-promo.scss';
+// @import './hero.scss';
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-family: $_font_family, $_second_font_family, sans-serif;
+  font-style: normal;
   font-weight: 400;
+  font-size: 16px;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  @include media(desktop) {
+    font-size: 24px;
+  }
+
+  color: $_main_color;
+  background-color: $_main_bg_color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  padding: 0 16px;
+
+  @include media(desktop) {
+    padding: 0 60px;
+  }
+}
+
+section {
+  padding: 40px 0;
+
+  @include media(desktop) {
+    padding: 100px 0;
+  }
+}
+
+.title {
+  font-family: $_second_font_family;
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  @include media(desktop) {
+    font-size: 64px;
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+.btn {
+  padding: 8px 24px;
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+
+  color: $_third_color;
+  background-color: $_btn_color;
+
+  transition: background-color $_transition;
+
+  &:hover {
+    background-color: $_hover_btn_color;
+  }
+
+  &:focus {
+    border: $_focus_border_color;
+    background-color: $_focus_btn_color;
+  }
+
+  &:active {
+    background-color: $_focus_btn_color;
+  }
+
+  &:disabled {
+    background-color: $_disabled_color;
+    cursor: not-allowed;
+  }
+
+  @include media(desktop) {
+    padding: 16px 44px;
+    font-size: 32px;
+  }
+}
+
+.dwd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  @include media(desktop) {
+    gap: 20px;
+  }
 }
