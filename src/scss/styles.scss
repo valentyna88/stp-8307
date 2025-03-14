@@ -1,4 +1,5 @@
 @import './header.scss';
+// @import './hero.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -52,4 +53,50 @@ section {
 
 .subtitle {
   font-weight: 600;
+}
+
+.btn {
+  padding: 8px 24px;
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 20px;
+
+  color: $_third_color;
+  background-color: $_btn_color;
+
+  transition: background-color $_transition;
+
+  &:hover {
+    background-color: $_hover_btn_color;
+  }
+
+  &:focus {
+    border: $_focus_border_color;
+    background-color: $_focus_btn_color;
+  }
+
+  &:active {
+    background-color: $_focus_btn_color;
+  }
+
+  &:disabled {
+    background-color: $_disabled_color;
+    cursor: not-allowed;
+  }
+
+  @include media(desktop) {
+    padding: 16px 44px;
+    font-size: 32px;
+  }
+}
+
+.dwd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  @include media(desktop) {
+    gap: 20px;
+  }
 }
