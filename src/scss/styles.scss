@@ -4,10 +4,10 @@
   font-family: $_font_family, $_second_font_family, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 16px;
 
   @include media(desktop) {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   color: $_main_color;
