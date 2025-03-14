@@ -1,4 +1,15 @@
-$_main_color: #242424;
-$_main_bg_color: rgba(255, 255, 255, 0.87);
-$_header_color: #747bff;
-$_header_accent_color: red;
+$_font_family: 'Schibsted Grotesk';
+$_second_font_family: 'Allerta Stencil';
+
+$_main_color: #fff;
+$_second_color: rgba(255, 255, 255, 0.6);
+$_third_color: #000;
+$_main_bg_color: #141414;
+$_second_bg_color: #1f1f1f;
+$_btn_color: #00ff66;
+$_hover_btn_color: #00cc52;
+$_focus_btn_color: #00e65c;
+$_focus_border_color: #008f44;
+$_disabled_color: #c4c4c4;
+
+$_transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
