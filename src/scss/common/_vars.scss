@@ -11,5 +11,9 @@ $_hover_btn_color: #00cc52;
 $_focus_btn_color: #00e65c;
 $_focus_border_color: #008f44;
 $_disabled_color: #c4c4c4;
+$_hover_header_link_color: rgba(255, 255, 255, 0.8);
+$_hover_footer_link_color: rgba(255, 255, 255, 0.85);
+$_hover_background_color: rgba(255, 255, 255, 0.1);
+$_focus_background_color: rgba(255, 255, 255, 0.15);
 
-$_transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$_transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
