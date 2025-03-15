@@ -108,16 +108,6 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    color: $_main_color;
-
-    &:hover,
-    &:focus {
-      transform: scale(1.5);
-    }
-  }
-
-  .modal-close-button-icon {
-    fill: currentColor;
   }
 
   .item {

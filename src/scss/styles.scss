@@ -1,6 +1,7 @@
 @import './header.scss';
 @import './footer.scss';
 @import './hero.scss';
+@import './reviews.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -37,7 +38,7 @@
   }
 }
 
-section {
+.section {
   padding: 40px 0;
 
   @include media(desktop) {
@@ -105,20 +106,18 @@ section {
 .icon-btn {
   border: none;
   background-color: transparent;
-  transition: $_transition;
+  transition: transform $_transition;
 
   &:hover {
-    background-color: $_hover_background_color;
     transform: scale(1.1);
   }
 
   &:focus {
     outline: none;
-    background-color: $_focus_background_color;
+    transform: scale(1.05);
   }
 
   &:active {
-    background-color: $_focus_background_color;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 }
