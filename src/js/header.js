@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', function () {
   menuItems.forEach(item => {
     item.addEventListener('click', closeMenu);
   });
+
+  document.addEventListener('click', function (event) {
+    if (
+      mobileMenuWrapper.classList.contains('is-open') &&
+      !mobileMenuWrapper.contains(event.target) &&
+      !mobileMenuOpenBtn.contains(event.target)
+    ) {
+      closeMenu();
+    }
+  });
 });
 
 // ------------------------------SCROLL---------------------------------
