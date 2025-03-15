@@ -1,0 +1,83 @@
+.hero {
+  height: 100vh;
+  background-image: url('../images/hero@1x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../images/hero@2x.png');
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+
+    @include media(desktop) {
+      padding: 0 35px;
+    }
+  }
+
+  .logo {
+    width: 60px;
+    height: 52px;
+    margin-bottom: 8px;
+
+    @include media(desktop) {
+      width: 100px;
+      height: 87px;
+      margin-bottom: 6px;
+    }
+  }
+
+  .title {
+    margin-bottom: 32px;
+
+    font-size: 32px;
+    text-align: center;
+
+    @include media(desktop) {
+      font-size: 96px;
+    }
+  }
+
+  .heading {
+    display: none;
+
+    @include media(desktop) {
+      display: inline;
+      margin-right: 44px;
+
+      font-size: 48px;
+    }
+  }
+
+  .btn {
+    width: 168px;
+
+    @include media(desktop) {
+      width: 281px;
+    }
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+
+    @include media(desktop) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+main > .hero {
+  padding: 228px 0 20px;
+
+  @include media(desktop) {
+    padding: 463px 0 35px;
+  }
+}
