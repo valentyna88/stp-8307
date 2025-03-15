@@ -26,7 +26,7 @@
   }
 }
 
-.privacy-title {
+.cookie-title {
   font-size: 32px;
   margin: 20px 0;
 
@@ -42,8 +42,45 @@
   }
 }
 
-.privacy-section {
+.cookie-section {
+  letter-spacing: 0.03em;
   padding-bottom: 20px;
+
+  @include font(16, 20);
+
+  .text {
+    text-align: left;
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
+  }
+  .h4-title {
+    position: relative;
+    padding-left: 20px;
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
+  }
+  .h4-title::before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $_main_color;
+  }
+
+  .list-item {
+    margin-bottom: 15px;
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
+  }
 
   .list {
     list-style: disc;
@@ -52,6 +89,8 @@
     .link {
       text-decoration: underline;
       text-decoration-skip-ink: auto;
+      word-break: break-all;
+      overflow-wrap: break-word;
 
       @include media(desktop) {
         font-size: 24px;
