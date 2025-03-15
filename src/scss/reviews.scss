@@ -1,0 +1,75 @@
+.slider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.reviews-swiper {
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+.reviews-swiper .swiper-slide {
+  flex-shrink: 1 !important;
+}
+
+.reviews-swiper .text {
+  width: 488px;
+  height: 60px;
+}
+
+.swiper-slide {
+  padding: 16px;
+
+  background-color: $_second_bg_color;
+
+  @media (min-width: 1200px) {
+    padding: 20px;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.text {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.name {
+  text-align: center;
+  font-size: 14px;
+  color: $_second_color;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $_second_color;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $_btn_color;
+}

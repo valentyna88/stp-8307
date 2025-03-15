@@ -1,7 +1,12 @@
 @use 'sass:math';
+@use 'swiper/scss';
+@use 'swiper/scss/pagination';
+@use 'swiper/scss/keyboard';
+@use 'swiper/scss/mousewheel';
+
 @import './breakpoints';
 /*
-screen types: 
+screen types:
     mobile,
     to-tablet
     tablet,
