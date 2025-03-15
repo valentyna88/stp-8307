@@ -1,4 +1,5 @@
 @import './header.scss';
+@import './footer.scss';
 // @import './hero.scss';
 
 :root {
@@ -64,8 +65,7 @@ section {
 
   color: $_third_color;
   background-color: $_btn_color;
-
-  transition: background-color $_transition;
+  transition: $_transition;
 
   &:hover {
     background-color: $_hover_btn_color;
@@ -78,11 +78,7 @@ section {
 
   &:active {
     background-color: $_focus_btn_color;
-  }
-
-  &:disabled {
-    background-color: $_disabled_color;
-    cursor: not-allowed;
+    transform: scale(0.9);
   }
 
   @include media(desktop) {
@@ -98,5 +94,26 @@ section {
 
   @include media(desktop) {
     gap: 20px;
+  }
+}
+
+.icon-btn {
+  border: none;
+  background-color: transparent;
+  transition: $_transition;
+
+  &:hover {
+    background-color: $_hover_background_color;
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $_focus_background_color;
+  }
+
+  &:active {
+    background-color: $_focus_background_color;
+    transform: scale(0.9);
   }
 }
