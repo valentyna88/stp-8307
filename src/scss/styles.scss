@@ -1,6 +1,6 @@
 @import './header.scss';
 @import './footer.scss';
-// @import './hero.scss';
+@import './hero.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -69,14 +69,15 @@ section {
 
   color: $_third_color;
   background-color: $_btn_color;
-  transition: $_transition;
+  transition: background-color $_transition, border-color $_transition,
+    transform $_transition;
 
   &:hover {
     background-color: $_hover_btn_color;
   }
 
   &:focus {
-    border: $_focus_border_color;
+    border-color: $_focus_border_color;
     background-color: $_focus_btn_color;
   }
 
