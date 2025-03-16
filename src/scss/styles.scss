@@ -5,6 +5,7 @@
 @import './reviews.scss';
 @import './terms&conditions.scss';
 @import './cookies-policy.scss';
+@import './pop-up.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -87,7 +88,7 @@
 
   &:active {
     background-color: $_focus_btn_color;
-    transform: scale(0.9);
+    transform: scale(0.97);
   }
 
   @include media(desktop) {
