@@ -17,6 +17,10 @@
       width: 16px;
       height: 24px;
     }
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -38,6 +42,14 @@
 
 .privacy-section {
   padding-bottom: 20px;
+
+  .text {
+    text-align: left;
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
+  }
 
   .list {
     list-style: disc;

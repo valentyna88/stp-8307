@@ -17,6 +17,10 @@
       width: 16px;
       height: 24px;
     }
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
   }
 }
 
@@ -49,9 +53,19 @@
       font-size: 24px;
     }
   }
+  .h3-title {
+    font-size: 16px;
+    font-weight: 400;
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
+  }
   .h4-title {
     position: relative;
     padding-left: 20px;
+    margin-bottom: 24px;
+    font-weight: 600;
 
     @include media(desktop) {
       font-size: 24px;
