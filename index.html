@@ -25,15 +25,22 @@
     
     <script type="module" crossorigin src="/stp-8307/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8307/assets/vendor-6958accf.js">
-    <link rel="stylesheet" href="/stp-8307/assets/styles-56e0e5a6.css">
+    <link rel="stylesheet" href="/stp-8307/assets/styles-2d82e4e2.css">
   </head>
   <body>
-    <!-- <section class="pop-up">
-  <div class="container">
-    <h2>Pop-up</h2>
+    <div id="cookieModal" class="modal">
+  <div class="modal-content">
+    <p class="text">
+      <span class="wide-text">We use cookies</span> to improve your experience
+      on our website. By browsing this website, you agree to our use of cookies.
+    </p>
+    <div class="wrapper">
+      <button id="acceptBtn" class="btn cookie-btn">ACCEPT COOKIES</button>
+      <button id="declineBtn" class="btn cookie-btn">DECLINE COOKIES</button>
+    </div>
   </div>
-</section>
- -->
+</div>
+
     <header class="header">
   <div class="container">
     <nav class="nav">
@@ -94,28 +101,28 @@
 
       <ul class="mobile-menu-list">
         <li class="item">
-          <a href="#home" class="mobile-menu-link">Home</a>
+          <a href="#home" class="link">Home</a>
         </li>
         <li class="item">
-          <a href="#about" class="mobile-menu-link">About</a>
+          <a href="#about" class="link">About</a>
         </li>
         <li class="item">
-          <a href="#features" class="mobile-menu-link">Features</a>
+          <a href="#features" class="link">Features</a>
         </li>
         <li class="item">
-          <a href="#reviews" class="mobile-menu-link">Reviews</a>
+          <a href="#reviews" class="link">Reviews</a>
         </li>
         <li class="item">
-          <a href="#how-to-play" class="mobile-menu-link">How To Play</a>
+          <a href="#how-to-play" class="link">How To Play</a>
         </li>
         <li class="item">
-          <a href="#advantages" class="mobile-menu-link">Advantages</a>
+          <a href="#advantages" class="link">Advantages</a>
         </li>
         <li class="item">
-          <a href="#faq" class="mobile-menu-link">FAQ</a>
+          <a href="#faq" class="link">FAQ</a>
         </li>
         <li class="item">
-          <a href="#gallery" class="mobile-menu-link">Gallery</a>
+          <a href="#gallery" class="link">Gallery</a>
         </li>
       </ul>
     </div>
@@ -440,11 +447,15 @@
     <footer class="footer">
   <div class="container">
     <ul class="list">
-      <li class="link"><a href="./privacy-policy.html">Privacy Policy</a></li>
       <li class="link">
-        <a href="./terms&conditions.html">Terms and Conditions</a>
+        <a href="./privacy-policy.html" class="link">Privacy Policy</a>
       </li>
-      <li class="link"><a href="./cookies-policy.html">Cookie Policy</a></li>
+      <li class="link">
+        <a href="./terms&conditions.html" class="link">Terms and Conditions</a>
+      </li>
+      <li class="link">
+        <a href="./cookies-policy.html" class="link">Cookie Policy</a>
+      </li>
     </ul>
     <p class="text">© 2025 joylightforce.com – All rights reserved.</p>
   </div>
