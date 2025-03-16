@@ -1,0 +1,74 @@
+.modal {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+
+  .modal-content {
+    height: 100%;
+    background-color: $_second_bg_color;
+    padding: 20px 16px;
+    text-align: center;
+
+    @include media(desktop) {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 60px;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+    margin-bottom: 36px;
+
+    .wide-text {
+      font-weight: 500;
+    }
+
+    @include media(desktop) {
+      display: block;
+      width: 540px;
+      text-align: left;
+      align-self: center;
+      margin-bottom: 0px;
+
+      font-size: 20px;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .cookie-btn {
+    width: 100%;
+    border: none;
+
+    @include media(desktop) {
+      width: 370px;
+    }
+  }
+}
+
+.modal.shown {
+  display: block;
+}
+
+body.overflow-hidden {
+  pointer-events: none;
+}
+
+body.overflow-hidden .modal {
+  pointer-events: all;
+}
