@@ -9,35 +9,23 @@
   background-color: $_second_bg_color;
 
   .list {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 40px;
 
     @include media(desktop) {
-      margin-bottom: 100px;
-
-      display: flex;
+      flex-direction: row;
       justify-content: space-between;
+      margin-bottom: 100px;
     }
 
     .link {
       font-size: 14px;
       text-decoration: underline;
       text-decoration-skip-ink: auto;
-      display: inline-block;
-      transition: transform $_transition, color $_transition,
-        opacity $_transition;
 
       &:not(:last-child) {
         margin-bottom: 12px;
-      }
-
-      &:hover {
-        color: $_hover_footer_link_color;
-      }
-
-      &:focus {
-        color: $_main_color;
-        transform: scale(0.95);
-        opacity: 0.8;
       }
 
       @include media(desktop) {

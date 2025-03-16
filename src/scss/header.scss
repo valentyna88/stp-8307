@@ -30,7 +30,7 @@
 
       @include media(desktop) {
         display: inline-block;
-        transition: $_transition;
+        transition: transform $_transition;
 
         .logo {
           width: 56px;
@@ -57,17 +57,7 @@
       }
 
       .link {
-        display: inline-block;
-        transition: $_transition;
-
-        &:hover {
-          color: $_hover_header_link_color;
-        }
-
         &:focus {
-          color: $_main_color;
-          transform: scale(0.95);
-          opacity: 0.8;
           text-decoration: underline;
         }
       }
@@ -114,21 +104,6 @@
     width: 100%;
     padding: 24px 0 6px;
     border-bottom: 1px solid $_main_color;
-  }
-
-  .mobile-menu-link {
-    display: inline-block;
-    transition: $_transition;
-
-    &:hover {
-      color: $_hover_header_link_color;
-    }
-
-    &:focus {
-      color: $_main_color;
-      transform: scale(0.95);
-      opacity: 0.8;
-    }
   }
 }
 

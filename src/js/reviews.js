@@ -17,5 +17,6 @@ const reviewsSwiper = new Swiper('.reviews-swiper', {
   touchEventsTarget: 'container',
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
