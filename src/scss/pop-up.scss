@@ -67,6 +67,7 @@
 
 body.overflow-hidden {
   pointer-events: none;
+  overflow: hidden;
 }
 
 body.overflow-hidden .modal {
