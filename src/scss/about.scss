@@ -1,0 +1,22 @@
+.about-section {
+  background-image: url('../images/bg@1x.png');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url('../images/bg@2x.png');
+  }
+
+  .text {
+    text-align: left;
+
+    .bold {
+      font-weight: 600;
+    }
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
+  }
+}
