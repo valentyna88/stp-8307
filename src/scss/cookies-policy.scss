@@ -23,6 +23,10 @@
     &:focus {
       color: $_focus_background_color;
     }
+
+    @include media(desktop) {
+      font-size: 24px;
+    }
   }
 }
 
