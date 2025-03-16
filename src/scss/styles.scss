@@ -7,6 +7,7 @@
 @import './cookies-policy.scss';
 @import './pop-up.scss';
 @import './about.scss';
+@import './join.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -63,6 +64,10 @@
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 8px 24px;
   border-radius: 8px;
 
