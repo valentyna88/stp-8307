@@ -5,6 +5,7 @@
 @import './reviews.scss';
 @import './terms&conditions.scss';
 @import './cookies-policy.scss';
+@import './pop-up.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -87,7 +88,7 @@
 
   &:active {
     background-color: $_focus_btn_color;
-    transform: scale(0.9);
+    transform: scale(0.97);
   }
 
   @include media(desktop) {
@@ -121,6 +122,49 @@
   }
 
   &:active {
+    transform: scale(0.95);
+  }
+}
+
+.link {
+  display: inline-block;
+  transition: transform $_transition, color $_transition, opacity $_transition;
+
+  &:hover {
+    color: $_hover_header_link_color;
+  }
+
+  &:focus {
+    color: $_main_color;
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include media(desktop) {
+    gap: 10px;
+  }
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 8px 10px;
+
+  transition: transform $_transition, border $_transition,
+    background-color $_transition;
+
+  &:hover {
+    background-color: $_hover_background_color;
+    border: 1px solid $_main_color;
+  }
+
+  &:focus {
+    background-color: $_focus_background_color;
+    border: 1px solid transparent;
     transform: scale(0.95);
   }
 }
