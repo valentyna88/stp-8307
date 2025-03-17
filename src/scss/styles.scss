@@ -6,6 +6,7 @@
 @import './terms&conditions.scss';
 @import './cookies-policy.scss';
 @import './pop-up.scss';
+@import './about.scss';
 
 :root {
   font-family: $_font_family, $_second_font_family, sans-serif;
@@ -25,10 +26,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .container {

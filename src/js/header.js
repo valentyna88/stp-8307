@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function openMenu() {
     mobileMenuWrapper.classList.add('is-open');
-    body.classList.add('overflow-hidden');
+    body.classList.add('no-scroll');
   }
 
   function closeMenu() {
     mobileMenuWrapper.classList.remove('is-open');
-    body.classList.remove('overflow-hidden');
+    body.classList.remove('no-scroll');
   }
 
   mobileMenuOpenBtn.addEventListener('click', openMenu);
