@@ -15,19 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
     beforeOpen: currElement => {
       const answerPanel = currElement.querySelector('.box-answer');
       answerPanel.style.display = 'block';
+
+      const icon = currElement.querySelector('.icon');
+      icon.classList.add('rotate');
     },
     beforeClose: currElement => {
       const answerPanel = currElement.querySelector('.box-answer');
       answerPanel.style.display = 'none';
+
+      const icon = currElement.querySelector('.icon');
+      icon.classList.remove('rotate');
     },
-  });
-});
-
-const sectors = document.querySelectorAll('.item');
-
-sectors.forEach(sector => {
-  sector.addEventListener('click', function () {
-    const arrow = this.querySelector('.icon');
-    arrow.classList.toggle('rotate');
   });
 });
