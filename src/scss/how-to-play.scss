@@ -5,27 +5,45 @@
     position: relative;
     z-index: 1;
 
-    .list {
-      position: relative;
+    .wrapper {
       display: flex;
       flex-direction: column;
-      gap: 20px;
-      list-style: disc;
-      padding-left: 20px;
 
-      .item:first-child {
-        margin-top: -55px;
+      @include media(desktop) {
+        flex-direction: row-reverse;
       }
 
-      .font {
-        font-family: $_second_font_family;
-      }
-    }
+      .list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: disc;
+        padding-left: 20px;
 
-    .image {
-      width: 100%;
-      height: 254px;
-      object-fit: cover;
+        @include media(desktop) {
+          list-style: none;
+          gap: 32px;
+        }
+
+        .item:first-child {
+          margin-top: -55px;
+
+          @include media(desktop) {
+            margin-top: 0;
+          }
+        }
+
+        .font {
+          font-family: $_second_font_family;
+        }
+      }
+
+      .image {
+        width: 100%;
+        height: 254px;
+        object-fit: cover;
+      }
     }
   }
 }
