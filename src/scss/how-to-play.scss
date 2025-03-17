@@ -1,0 +1,54 @@
+.play-section {
+  // position: relative;
+
+  .container {
+    // position: relative;
+    z-index: 1;
+
+    .wrapper {
+      //   position: relative;
+      display: flex;
+      flex-direction: column;
+
+      @include media(desktop) {
+        flex-direction: row-reverse;
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        list-style: disc;
+        padding-left: 20px;
+
+        @include media(desktop) {
+          list-style: none;
+          gap: 32px;
+        }
+
+        .item:first-child {
+          margin-top: -55px;
+
+          @include media(desktop) {
+            margin-top: 0;
+          }
+        }
+
+        .font {
+          font-family: $_second_font_family;
+        }
+      }
+
+      .image {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+
+        @include media(desktop) {
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
