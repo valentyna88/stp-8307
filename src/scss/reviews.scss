@@ -1,3 +1,11 @@
+.reviews-section {
+  padding-top: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+}
+
 .slider-list {
   display: flex;
   flex-direction: column;

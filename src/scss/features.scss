@@ -3,77 +3,95 @@
   background-size: contain;
   background-repeat: repeat;
   background-position: center;
-  position: relative;
 
   @media (min-resolution: 2dppx) {
     background-image: url('../images/bg@2x.png');
   }
 
-  .wrapper {
-    // position: relative;
+  .container {
+    position: relative;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
 
-    .img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
+  .image-mobile {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 
     @include media(desktop) {
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: flex-start;
-      position: relative;
+      display: none;
+    }
+  }
 
-      .img {
-        position: absolute;
-        // inset: 0;
-        top: 15px;
-        left: -25%;
-        height: 100%;
-        object-fit: cover;
+  .image-desktop {
+    display: none;
+
+    @include media(desktop) {
+      display: block;
+      position: absolute;
+      top: 120px;
+      right: 92px;
+
+      max-width: none;
+      object-fit: cover;
+    }
+  }
+
+  .features {
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+  }
+
+  .features-content {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    width: 100%;
+    margin-top: 10px;
+
+    @include media(desktop) {
+      width: 50%;
+      margin-top: 0;
+      gap: 16px;
+    }
+
+    .arrow-icon {
+      display: flex;
+      justify-content: start;
+      align-items: start;
+      flex-shrink: 0;
+      width: 22px;
+      height: 482px;
+
+      @include media(desktop) {
+        width: 32px;
+        height: 764px;
       }
     }
 
-    .features-content {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      width: 100%;
-      z-index: 1;
+    .text {
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: 15px;
+
+      .bold {
+        font-weight: 600;
+      }
 
       @include media(desktop) {
-        width: 50%;
-        align-items: center;
+        width: 480px;
+        font-size: 24px;
+        margin-bottom: 32px;
       }
+    }
 
-      .arrow-icon {
-        flex-shrink: 0;
-        width: 22px;
-        height: 482px;
-      }
-
-      .text {
-        text-align: left;
-        margin-bottom: 20px;
-        font-size: 15px;
-
-        .bold {
-          font-weight: 600;
-        }
-
-        @include media(desktop) {
-          font-size: 24px;
-          margin-bottom: 32px;
-        }
-      }
-
-      .list .item:last-child .text {
-        margin-bottom: 0;
-      }
+    .list .item:last-child .text {
+      margin-bottom: 0;
     }
   }
 }

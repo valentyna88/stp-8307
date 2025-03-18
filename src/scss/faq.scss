@@ -1,4 +1,10 @@
 .faq-section {
+  padding-top: 40px;
+
+  @include media(desktop) {
+    padding-top: 100px;
+  }
+
   .item {
     display: flex;
     flex-direction: column;
