@@ -1,19 +1,27 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 2000;
 
   width: 100%;
   margin: 0 auto;
   padding: 16px 0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
   @include media(desktop) {
-    position: fixed;
-    z-index: 10;
-
     padding: 20px 0;
 
     background-color: $_second_bg_color;
+  }
+
+  .container {
+    height: 24px;
+
+    @include media(desktop) {
+      height: auto;
+    }
   }
 
   .nav {
@@ -68,6 +76,9 @@
 /* -------- MOBILE MENU ---------- */
 
 .mobile-menu-open-btn {
+  width: 24px;
+  height: 24px;
+
   @include media(desktop) {
     display: none;
   }
