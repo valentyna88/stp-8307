@@ -1,33 +1,36 @@
 .play-section {
-  // position: relative;
-
   .container {
-    // position: relative;
+    position: relative;
     z-index: 1;
 
-    .wrapper {
-      //   position: relative;
-      display: flex;
-      flex-direction: column;
+    .title {
+      margin-bottom: 0;
 
       @include media(desktop) {
-        flex-direction: row-reverse;
+        margin-bottom: 40px;
       }
+    }
+
+    .wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
 
       .list {
         display: flex;
         flex-direction: column;
         gap: 20px;
         list-style: disc;
-        padding-left: 20px;
+        padding-left: 35px;
 
         @include media(desktop) {
-          list-style: none;
+          width: 505px;
           gap: 32px;
         }
 
         .item:first-child {
-          margin-top: -55px;
+          margin-top: -85px;
 
           @include media(desktop) {
             margin-top: 0;
@@ -39,15 +42,28 @@
         }
       }
 
-      .image {
+      .image-mobile {
         max-width: 100%;
         height: auto;
         object-fit: cover;
 
         @include media(desktop) {
-          width: 50%;
-          height: auto;
+          display: none;
         }
+      }
+    }
+
+    .image-desktop {
+      display: none;
+
+      @include media(desktop) {
+        display: block;
+        position: absolute;
+        top: -60px;
+        right: 0;
+
+        max-width: none;
+        object-fit: cover;
       }
     }
   }
